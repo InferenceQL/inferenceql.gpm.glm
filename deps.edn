@@ -1,0 +1,14 @@
+{:deps {com.github.haifengl/smile-core {:mvn/version "2.6.0"}
+        incanter/incanter-io {:mvn/version "1.9.3"}
+        org.apache.commons/commons-math3 {:mvn/version "3.6.1"}
+        org.bytedeco/openblas {:mvn/version "0.3.17-1.5.6"}
+        org.bytedeco/openblas-platform {:mvn/version "0.3.17-1.5.6"}
+        org.clojars.haifengl/smile {:mvn/version "2.6.0"}
+        probcomp/inferenceql.inference {:git/url "git@github.com:probcomp/inferenceql.inference.git"
+                                        :sha "10ae57657950fe502d1637e8f2522c3be24a3ca6"}}
+ :aliases {:test {:extra-paths ["test/src" "test/resources"]
+                  :extra-deps {expound/expound {:mvn/version "0.7.2"}
+                               lambdaisland/kaocha {:mvn/version "1.0-612"}
+                               org.clojure/test.check {:mvn/version "1.1.0"}}}
+           :readme {:extra-deps {seancorfield/readme {:mvn/version "1.0.13"}}
+                    :main-opts ["-m" "seancorfield.readme"]}}}

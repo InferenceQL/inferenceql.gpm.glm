@@ -1,0 +1,44 @@
+name: tests
+on: push
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Java
+        uses: actions/setup-java@v1
+        with:
+          java-version: 11
+
+      - name: Setup Clojure tools
+        uses: DeLaGuardo/setup-clojure@master
+        with:
+          tools-deps: 1.10.3.943
+
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Add SSH key
+        uses: webfactory/ssh-agent@v0.4.1
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: Cache m2
+        uses: actions/cache@v2
+        with:
+          path: ~/.m2
+          key: m2-${{ hashFiles('deps.edn') }}
+
+      - name: Cache gitlibs
+        uses: actions/cache@v2
+        with:
+          path: ~/.gitlibs
+          key: gitlibs-${{ hashFiles('deps.edn') }}
+
+      - name: Prepare Clojure dependencies
+        run: clojure -M:readme:test -P
+
+      - name: Run tests in README
+        run: clojure -M:readme
+
+      - name: Run tests
+        run: bin/kaocha --reporter documentation --plugin kaocha.plugin/profiling
