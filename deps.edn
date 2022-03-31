@@ -4,7 +4,7 @@
         org.bytedeco/openblas {:mvn/version "0.3.17-1.5.6"}
         org.bytedeco/openblas-platform {:mvn/version "0.3.17-1.5.6"}
         org.clojars.haifengl/smile {:mvn/version "2.6.0"}
-        probcomp/inferenceql.inference {:git/url "git@github.com:probcomp/inferenceql.inference.git"
+        probcomp/inferenceql.inference {:git/url "https://github.com/OpenIQL/inferenceql.inference.git"
                                         :sha "10ae57657950fe502d1637e8f2522c3be24a3ca6"}}
  :aliases {:test {:extra-paths ["test/src" "test/resources"]
                   :extra-deps {expound/expound {:mvn/version "0.7.2"}
