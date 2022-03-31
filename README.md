@@ -1,7 +1,7 @@
 # inferenceql.gpm.glm
 
-![tests](https://github.com/probcomp/inferenceql.gpm.glm/workflows/tests/badge.svg)
-![linter](https://github.com/probcomp/inferenceql.gpm.glm/workflows/linter/badge.svg)
+![tests](https://github.com/OpenIQL/inferenceql.gpm.glm/workflows/tests/badge.svg)
+![linter](https://github.com/OpenIQL/inferenceql.gpm.glm/workflows/linter/badge.svg)
 
 Linear models.
 
