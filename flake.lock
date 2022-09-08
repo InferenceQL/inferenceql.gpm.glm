@@ -31,27 +31,10 @@
         "type": "github"
       }
     },
-    "nixpkgs-sppl": {
-      "locked": {
-        "lastModified": 1647703831,
-        "narHash": "sha256-6qjgWliwYtFsEUl4/SjlUaUF9hSSfVoaRZzN6MCgslg=",
-        "owner": "nixos",
-        "repo": "nixpkgs",
-        "rev": "35a74aa665a681b60d68e3d3400fcaa11690ee50",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nixos",
-        "repo": "nixpkgs",
-        "rev": "35a74aa665a681b60d68e3d3400fcaa11690ee50",
-        "type": "github"
-      }
-    },
     "root": {
       "inputs": {
         "flake-utils": "flake-utils",
-        "nixpkgs": "nixpkgs",
-        "nixpkgs-sppl": "nixpkgs-sppl"
+        "nixpkgs": "nixpkgs"
       }
     }
   },
