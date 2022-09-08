@@ -8,7 +8,6 @@
 
  :aliases {:test {:extra-paths ["test/src" "test/resources"]
                   :extra-deps {expound/expound {:mvn/version "0.7.2"}
-                               lambdaisland/kaocha {:mvn/version "1.0-612"}
-                               org.clojure/test.check {:mvn/version "1.1.0"}}}
-           :readme {:extra-deps {seancorfield/readme {:mvn/version "1.0.13"}}
-                    :main-opts ["-m" "seancorfield.readme"]}}}
+                               io.github.cognitect-labs/test-runner {:git/tag "v0.5.1" :git/sha "dfb30dd"}
+                               org.clojure/test.check {:mvn/version "1.1.0"}}
+                  :exec-fn cognitect.test-runner.api/test}}}
