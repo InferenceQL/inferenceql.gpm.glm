@@ -30,10 +30,7 @@ jobs:
           key: gitlibs-${{ hashFiles('deps.edn') }}
 
       - name: Prepare Clojure dependencies
-        run: clojure -M:readme:test -P
-
-      - name: Run tests in README
-        run: clojure -M:readme
+        run: clojure -A:test -P
 
       - name: Run tests
-        run: bin/kaocha --reporter documentation --plugin kaocha.plugin/profiling
+        run: clojure -X:test
